@@ -79,5 +79,5 @@ namespace HairSalon.Controllers
 	{
 	return View();
 	}
-  }
+}
 }

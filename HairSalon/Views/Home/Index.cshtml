@@ -1,29 +1,10 @@
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using HairSalon.Models;
+@{
+  Layout = "_Layout";
+}
+<div clss="row">
+<div class="col-md-4">
+<button class="btn btn-default"><a href="/stylists">View Our Stylists</button>
 
-namespace HairSalon.Controllers
-{
-	public class HomeController : Controller
-	{
-	//BASIC MENU PAGES
-    [HttpGet("/")]
-    public ActionResult Index()
-    {
-      return View();
-    }
-	//Shows All Stylists 
-    [HttpGet("/stylists")]
-	{
-      List<Stylist> allStylists = Stylist.GetAll();
-	  return View(allStylists);
-    }
-	//
-	public ActionResult Clients(string orderby)
-    {
-			.......
-	  return View(orderedSelected);
-	  }
-    }
+<button class="btn btn-default"><a href="/clients">View Our Clients</button>
+</div>
+</div>

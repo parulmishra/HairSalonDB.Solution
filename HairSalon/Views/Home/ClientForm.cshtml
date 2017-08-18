@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+<h2>Add a Client for </h2>
+<form action="/stylists/@Model.GetId()/clients/@Model.GetId()" method="post">
+  <div class="form-group">
+    <label for="client-name">ENTER CLIENT'S NAME</label>
+    <input name="restaurant_name" type="text" id="restaurant_name">
+  </div>
+
+  <div class="form-group">
+    <label for="restaurant_address">ENTER CLIENT'S EMAIL</label>
+    <input name="restaurant_address" type="text" id="restaurant_address">
+  </div>
+
+  <div class="form-group">
+    <label for="restaurant_pricey">ENTER CLIENT'S PHONE NUMBER</label>
+    <input name="restaurant_pricey" type="text" id="restaurant_pricey">
+  </div>
+	
+  <button class="btn btn-default" type="submit">Add Restaurant</button>
+</form>
+<button class="btn btn-default"><a href="/">Home</a></button>

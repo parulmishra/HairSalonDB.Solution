@@ -148,11 +148,12 @@ namespace HairSalon.Models
 			conn.Close();
 			return newClient;
 		}
-		public Stylist GetStylist()
+		/*public Stylist GetStylist()
 		{
 			
 			
 		}
+		*/
 		public static void DeleteAll()
 		{
 			MySqlConnection conn = DB.Connection();

@@ -1,0 +1,39 @@
+body{
+  background-image: url("/img/mainimage.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+h1 {
+ font-size: 120px;
+ letter-spacing: 8px;
+ margin-top: 5%;
+ margin-bottom: 20%;
+ text-align: center;
+ width: 100%;
+ color: black;
+}
+h2
+{
+  font-size: 80px;
+  color: black;
+}
+.btn {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  -webkit-box-shadow: 7px 7px 8px #666666;
+  -moz-box-shadow: 7px 7px 8px #666666;
+  box-shadow: 7px 7px 8px #666666;
+  font-family: Arial;
+  color: white;
+  font-size: 40px;
+  background: black;
+  padding: 32px 31px 31px 31px;
+  text-decoration: none;
+  margin-left: 900px;
+  margin-top: 80px;
+}
+a
+{
+	font-size: 40px;
+}

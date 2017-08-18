@@ -1,0 +1,32 @@
+@{
+  Layout = "_Layout";
+}
+<h2>Add a Stylist</h2>
+
+<form action="/stylists/add" method="post">
+	<div class="form-group">
+		<label id="stylist-name"for="stylist-name">NAME</label>
+		<input type="text" name="stylist-name" id="stylist-name">
+	</div>
+
+	<div class="form-group">
+		<label id="expertise" for="expertise">EXPERTISE</label>
+		<input type="text" name="expertise" id="expertise">
+	</div>
+	
+	<div class="form-group">
+		<label id="experience" for="experience">EXPERIENCE</label>
+		<input type="number" name="experience" id="experience">
+	</div>
+	
+	<div class="form-group">
+		<label id="rate" for="rate">RATE</label>
+		<input type="number" name="rate" id="rate">
+	</div>
+	
+<div class="row">
+<button class="btn btn-default" type="submit">Add Stylist</button>
+
+</form>
+<button class="btn btn-default"><a href="/">Home</a></button>
+</div>
