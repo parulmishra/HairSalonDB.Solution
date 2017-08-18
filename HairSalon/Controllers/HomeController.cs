@@ -5,7 +5,7 @@ using System.Linq;
 using HairSalon.Models;
 
 namespace HairSalon.Controllers
-{
+	{
 	public class HomeController : Controller
 	{
 	[HttpGet("/")]
@@ -17,25 +17,25 @@ namespace HairSalon.Controllers
 	[HttpGet("/clients")]
 	public ActionResult GetAllClients()
 	{
-		return View();
+		return View(Client.GetAll());
 	}
 
 	[HttpGet("/clients/{id}")]
 	public ActionResult GetClient(int clientId)
 	{
-		return View();
+		return View(Client.Find(clientId));
 	}
 
 	[HttpGet("/stylists")]
 	public ActionResult GetAllStylists()
 	{
-		return View();
+		return View(Stylist.GetAll());
 	}
 
 	[HttpGet("/stylists/{id}")]
 	public ActionResult GetStylist(int stylistId)
 	{
-		return View();
+		return View(Stylist.Find(stylistId));
 	}
 
 	[HttpGet("/clients/add")]
@@ -53,13 +53,25 @@ namespace HairSalon.Controllers
 	[HttpPost("/clients/add")]
 	public ActionResult AddClient()
 	{
-		return View();
+		string name = Request.Form["client-name"];
+		string email = Request.Form["email"];
+		string phone = Request.Form["phone"];
+		string stylistid = Request.Form["stylistid"];
+		var client = new Client(name, email, phone, stylistid);
+		client.Save();
+		return View("GetAllClients", Client.GetAll());	
 	}
 
 	[HttpPost("/stylist/add")]
 	public ActionResult AddStylist()
 	{
-		return View();
+		string name = Request.Form["stylist-name"];
+		string expertise = Request.Form["expertise"];
+		int experience = int.Parse(Request.Form["experience"]);
+		int rate = int.Parse(Request.Form["rate"]);
+		var stylist = new Stylist(name, expertise, experience, rate);
+		stylist.Save();
+		return View("GetAllStylists", Stylist.GetAll());
 	}
 
 	[HttpPut("/client/update")]
@@ -77,7 +89,7 @@ namespace HairSalon.Controllers
 	[HttpGet("/stylists/delete/{id}")]
 	public ActionResult DeleteStylist(int stylistId)
 	{
-	return View();
+		return View();
 	}
-}
+  }
 }

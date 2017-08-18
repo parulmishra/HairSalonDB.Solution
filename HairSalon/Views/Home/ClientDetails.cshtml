@@ -1,0 +1,15 @@
+@{
+    Layout = "_Layout";
+}
+
+<div class = "well">
+   <h2><strong>@Model["clients"].GetName() Details</strong></h2>
+   <h3>NAME: @Model["clients"].GetName()</h3>
+   <h3>EMAIL: @Model["clients"].GetEmail()</h3>
+   <h3>PHONE: @Model["clients"].GetPhone()</h3>
+</div>
+
+<button class="btn btn-default" type="button"><a href='/stylists/@Model["stylists"].GetId()/clients/@Model.GetId()'>BACK TO ALL CLIENTS</a></button>
+<button class="btn btn-default" type="button"><a href='/stylists/@Model["stylists"].GetId()/clients/@Model.GetId()/ClientForm'>UPDATE CLIENT INFORMATION</a></button>
+<button class="btn btn-default"><a href="/">HOME</a></button>
+<button class="btn btn-default"><a href='/stylists/@Model["stylists"].GetId()/clients/@Model["clients"].GetId()/delete'>DELETE</a></button>
