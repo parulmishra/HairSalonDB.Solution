@@ -1,0 +1,29 @@
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using HairSalon.Models;
+
+namespace HairSalon.Controllers
+{
+	public class HomeController : Controller
+	{
+	//BASIC MENU PAGES
+    [HttpGet("/")]
+    public ActionResult Index()
+    {
+      return View();
+    }
+	//Shows All Stylists 
+    [HttpGet("/stylists")]
+	{
+      List<Stylist> allStylists = Stylist.GetAll();
+	  return View(allStylists);
+    }
+	//
+	public ActionResult Clients(string orderby)
+    {
+			.......
+	  return View(orderedSelected);
+	  }
+    }
