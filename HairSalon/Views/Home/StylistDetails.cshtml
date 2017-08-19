@@ -1,0 +1,19 @@
+@{
+    Layout = "_Layout";
+}
+
+<div class = "well">
+   <h2><strong>@Model.GetName() Details</strong></h2>
+   <h3>NAME: @Model.GetName()</h3>
+   <h3>EXPERTISE: @Model.GetExpertise()</h3>
+   <h3>Experience: @Model.GetExperience() years</h3>
+   <h3>Rate: $ @Model.GetRate()</h3>
+</div>
+<ul>
+@foreach(var client in @Model.GetClients())
+{
+<li> <a href="/clients/@client.GetId()">@client.GetName()</a></li>
+}
+</ul>
+<button class="btn btn-default"><a href="/">HOME</a></button>
+<button class="btn btn-default"><a href='/stylists/delete/@Model.GetId()'>DELETE</a></button>

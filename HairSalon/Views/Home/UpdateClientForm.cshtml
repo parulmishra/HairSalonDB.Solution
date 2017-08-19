@@ -1,0 +1,39 @@
+@{
+  Layout = "_Layout";
+}
+<h2>Update Client </h2>
+<form action='/clients/update/@Model["client"].GetId()' method="post">
+  <div class="form-group">
+    <label for="client-name">ENTER CLIENT'S NAME</label>
+    <input name="client-name" type="text" id="client-name" value='@Model["client"].GetName()'>
+  </div>
+
+  <div class="form-group">
+    <label for="client-email">ENTER CLIENT'S EMAIL</label>
+    <input name="client-email" type="text" id="client-email" value='@Model["client"].GetEmail()'>
+  </div>
+
+  <div class="form-group">
+    <label for="client-phone">ENTER CLIENT'S PHONE NUMBER</label>
+    <input name="client-phone" type="text" id="client-phone" value='@Model["client"].GetPhone()'>
+  </div>
+	
+  <div class="form-group">
+    <label for="stylistid">SELECT CLIENT's STYLIST</label>
+    <select name="stylistid" id="stylistid">
+	@foreach(var stylist in @Model["stylists"])
+	{
+		@if(@stylist.GetId() == @Model["client"].GetStylistId())
+		{
+			<option value="@stylist.GetId()" selected> @stylist.GetName()</option>
+		}
+		else
+		{
+			<option value="@stylist.GetId()" > @stylist.GetName()</option>
+		}
+	}
+	</select>
+  </div>
+  <button class="btn btn-default" type="submit">Update Client</button>
+</form>
+<button class="btn btn-default"><a href="/">Home</a></button>

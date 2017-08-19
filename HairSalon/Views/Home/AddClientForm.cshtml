@@ -1,8 +1,8 @@
 @{
   Layout = "_Layout";
 }
-<h2>Add a Client for </h2>
-<form action="/stylists/@Model.GetId()/clients/@Model.GetId()" method="post">
+<h2>Add a Client</h2>
+<form action="/clients/add" method="post">
   <div class="form-group">
     <label for="client-name">ENTER CLIENT'S NAME</label>
     <input name="client-name" type="text" id="client-name">
@@ -17,7 +17,16 @@
     <label for="client-phone">ENTER CLIENT'S PHONE NUMBER</label>
     <input name="client-phone" type="text" id="client-phone">
   </div>
+  <div class="form-group">
+    <label for="stylistid">SELECT CLIENT's STYLIST</label>
+    <select name="stylistid" id="stylistid">
+	@foreach(var stylist in @Model)
+	{
+		<option value="@stylist.GetId()"> @stylist.GetName()</option>
+	}
+	</select>
+  </div>
 	
-  <button class="btn btn-default" type="submit">Add Restaurant</button>
+  <button class="btn btn-default" type="submit">Add Client</button>
 </form>
 <button class="btn btn-default"><a href="/">Home</a></button>
