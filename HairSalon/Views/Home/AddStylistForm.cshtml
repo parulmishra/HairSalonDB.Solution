@@ -1,9 +1,11 @@
 @{
   Layout = "_Layout";
 }
+<div class="well">
 <h2>Add a Stylist</h2>
+<div class= "row">
+ <form action="/stylists/add" method="post">
 
-<form action="/stylists/add" method="post">
 	<div class="form-group">
 		<label id="stylist-name"for="stylist-name">NAME</label>
 		<input type="text" name="stylist-name" id="stylist-name">
@@ -23,7 +25,8 @@
 		<label id="rate" for="rate">RATE</label>
 		<input type="number" name="rate" id="rate">
 	</div>
-	
+</div>
+</div>		
 <div class="row">
 <button class="btn btn-default" type="submit">Add Stylist</button>
 

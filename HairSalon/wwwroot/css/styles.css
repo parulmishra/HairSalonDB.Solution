@@ -7,14 +7,14 @@ h1 {
  font-size: 120px;
  letter-spacing: 8px;
  margin-top: 5%;
- margin-bottom: 20%;
+ margin-bottom: 5%;
  text-align: center;
  width: 100%;
  color: black;
 }
 h2
 {
-  font-size: 80px;
+  font-size: 50px;
   color: black;
 }
 .btn {
@@ -26,14 +26,29 @@ h2
   box-shadow: 7px 7px 8px #666666;
   font-family: Arial;
   color: white;
-  font-size: 40px;
+  font-size: 20px;
   background: black;
-  padding: 32px 31px 31px 31px;
+  padding: 30px 30px 30px 30px;
   text-decoration: none;
-  margin-left: 900px;
-  margin-top: 80px;
+  margin-left: 400px;
+  margin-bottom: 10px;
 }
 a
 {
-	font-size: 40px;
+	font-size: 20px;
+}
+well
+{
+	width: 70px;
+	float: left;
+}
+input
+{
+	font-size: 15px;
+	width: 500px;
+}
+label
+{
+	margin-left:5px;
+	font-size: 15px;
 }

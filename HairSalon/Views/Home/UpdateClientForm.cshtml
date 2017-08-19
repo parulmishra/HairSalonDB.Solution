@@ -1,6 +1,8 @@
 @{
   Layout = "_Layout";
 }
+<div class="row">
+ <div class="well">
 <h2>Update Client </h2>
 <form action='/clients/update/@Model["client"].GetId()' method="post">
   <div class="form-group">
@@ -34,6 +36,10 @@
 	}
 	</select>
   </div>
+ </div>
+</div>
+<div class="row">
   <button class="btn btn-default" type="submit">Update Client</button>
 </form>
 <button class="btn btn-default"><a href="/">Home</a></button>
+</div>
